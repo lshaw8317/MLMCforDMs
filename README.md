@@ -5,7 +5,7 @@ computation with deep
 generative samplers by
 Multilevel Monte Carlo" Haji-Ali et. al. (2024) adapted from various sources.
 
-##Denoising
+## Denoising
 Adapted from https://github.com/yang-song/score_sde_pytorch associated to
 ```bib
 @inproceedings{
@@ -23,7 +23,7 @@ Make sure that you download CIFAR10 to the appropriate directory (see ``main.py`
 ```
 python main.py --workdir exp/checkpoints/cifar10_ddpmpp_continuous --acc 0.0086 --config configs/vp/cifar10_ddpmpp_continuous.py --eval_folder exp/eval/cifar10DenoisingSecondmoment_0.8 --MLMCsampler EXPINT --probflow=False --conditional=True --payoff secondmoment --conditional_noise .8
 ```
-##Superresolution
+## Superresolution
 Adapted from https://github.com/Janspiry/Image-Super-Resolution-via-Iterative-Refinement associated to
 
 [Paper](https://arxiv.org/pdf/2104.07636.pdf ) |  [Project](https://iterative-refinement.github.io/ )
@@ -33,7 +33,7 @@ Run e.g.
 python MLMC.py -acc 0.018 -gpu 1
 ```
 
-##Inpainting
+## Inpainting
 Adapted from https://github.com/NVlabs/I2SB associated to 
 ```
 @article{liu2023i2sb,
