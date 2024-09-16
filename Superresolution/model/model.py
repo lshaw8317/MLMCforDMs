@@ -268,7 +268,7 @@ class DDPM(BaseModel):
                np.savez_compressed(fout,costmlmc=np.array(cost_mlmc),costmc=np.array(cost_mc))
 
             meanimg=torch.sum(sums[:,0]/dividerN[:,0,...],axis=0)#cut off one dummy axis
-            meanimg=Metrics.tensor2img(meanimg,min_max=(-1.,1)) #default min_max=(-1., 1.)
+            #meanimg=Metrics.tensor2img(meanimg,min_max=(-1.,1)) #default min_max=(-1., 1.), but causes problems for second moment
             # Write samples to disk or Google Cloud Storage
             with open(os.path.join(this_sample_dir, "meanpayoff.npz"), "wb") as fout:
                 np.savez_compressed(fout, meanpayoff=meanimg)
