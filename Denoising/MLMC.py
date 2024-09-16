@@ -516,7 +516,7 @@ def mlmc_test(config,eval_dir,checkpoint_dir,payoff_arg,acc=[],M=2,Lmax=11,
                 f.write(f'MLMC params:epsilon={e}, alpha={alpha}, beta={beta}, N0={mlmcopts.N0}, Lmax={mlmcopts.Lmax}, Lmin={mlmcopts.Lmin}, M={mlmcopts.M}, accsplit={mlmcopts.accsplit}.\n')
             
             meanimg=torch.sum(sums[:,0]/dividerN[:,0,...],axis=0)#cut off one dummy axis
-            meanimg=np.clip(inverse_scaler(meanimg).permute(1, 2, 0).cpu().numpy() * 255., 0, 255).astype(np.uint8)
+            #meanimg=np.clip(inverse_scaler(meanimg).permute(1, 2, 0).cpu().numpy() * 255., 0, 255).astype(np.uint8) #causes problems for second moment
             with open(os.path.join(this_sample_dir, "meanpayoff.npz"), "wb") as fout:
                 np.savez_compressed(fout, meanpayoff=meanimg)
        
