@@ -315,7 +315,7 @@ class MLMCRunner(object):
                np.savez_compressed(fout,costmlmc=np.array(cost_mlmc),costmc=np.array(cost_mc))
 
             meanimg=torch.sum(sums[:,0]/dividerN[:,0,...],axis=0)#cut off one dummy axis
-            meanimg=torch.clip(.5*meanimg+.5,0.,1.).permute(1,2,0).cpu().numpy()
+            #meanimg=torch.clip(.5*meanimg+.5,0.,1.).permute(1,2,0).cpu().numpy() #causes problems for second moment
             # Write samples to disk or Google Cloud Storage
             with open(os.path.join(this_sample_dir, "meanpayoff.npz"), "wb") as fout:
                 np.savez_compressed(fout, meanpayoff=meanimg)
