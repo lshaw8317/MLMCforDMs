@@ -3,7 +3,7 @@
 Code for "Accelerating Bayesian
 computation with deep
 generative samplers by
-Multilevel Monte Carlo" Haji-Ali et. al. (2024) adapted from various sources.
+Multilevel Monte Carlo" Haji-Ali et. al. (2024) (https://arxiv.org/abs/2409.15511) adapted from various sources.
 
 ## Denoising
 Adapted from https://github.com/yang-song/score_sde_pytorch associated to
