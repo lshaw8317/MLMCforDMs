@@ -1,9 +1,6 @@
 # MLMCforDMs
 
-Code for "Accelerating Bayesian
-computation with deep
-generative samplers by
-Multilevel Monte Carlo" Haji-Ali et. al. (2024) (https://arxiv.org/abs/2409.15511) adapted from various sources.
+Code for Shaw, Luke, Abdul-Lateef Haji-Ali, Marcelo Pereyra, and Konstantinos Zygalakis. "Bayesian computation with generative diffusion models by Multilevel Monte Carlo." *Philosophical Transactions A* 383, no. 2299 (2025): 20240333. (https://arxiv.org/abs/2409.15511) adapted from various sources.
 
 ## Denoising
 Adapted from https://github.com/yang-song/score_sde_pytorch associated to
